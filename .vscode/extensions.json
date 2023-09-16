@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "prisma.prisma",
+    "rocketseat.theme-omni",
+    "PKief.material-icon-theme",
+    "esbenp.prettier-vscode",
+    "csstools.postcss"
+  ]
+}

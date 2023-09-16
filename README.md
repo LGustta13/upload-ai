@@ -73,3 +73,7 @@ npx shadcn-ui@latest init
 Bilioteca com vários componentes, principalmente do Radix, seguindo um estilo de design padrão com uma união dos componentes. Instala automaticamente o RadixUI e o TailwindCSS.
 Os comandos acima são um exemplo do que devo fazer para iniciar um projeto com Shadcn, conforme na documentação de instalação.
 Os componentes do Shadcn são copiados para dentro do projeto, ou seja, não vem de um pacote, como o MaterialUI ou Bootstrap
+
+#### components/ui
+
+Quando o shadcn é iniciado, o alias de @/components é usado para anexar todos os componentes que são baixados do shadcnUI, que vão na pasta ./ui
