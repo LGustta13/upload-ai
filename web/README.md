@@ -13,7 +13,7 @@ Aplicação que recebe vídeos e utiliza IA para gerar títulos e descrições .
 <br>
 
 <p align="center">
-  <img alt="imagem representando um preview do projeto" src="./public/preview.png" width="100%">
+  <img alt="imagem representando um preview do projeto" src="./.github/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -21,10 +21,12 @@ Aplicação que recebe vídeos e utiliza IA para gerar títulos e descrições .
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - Vite
+- React
 - TailwindCSS
 - RadixUI
 - ShadcnUI
-- Lucid react
+- Fastify
+- Prisma
 
 ## 💻 Projeto
 
@@ -87,6 +89,7 @@ npx shadcn-ui@latest add textarea
 npx shadcn-ui@latest add label
 npx shadcn-ui@latest add select
 npx shadcn-ui@latest add slider
+npx shadcn-ui@latest add dropdown-menu
 ```
 
 ### lucide react
@@ -96,7 +99,3 @@ npm install lucide-react
 ```
 
 Utilizado para inserir ícones
-
-### Windows+.
-
-Chama uma lista de emojis
