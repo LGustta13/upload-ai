@@ -21,6 +21,9 @@ Aplicação que recebe vídeos e utiliza IA para gerar títulos e descrições .
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - Vite
+- TailwindCSS
+- RadixUI
+- ShadcnUI
 
 ## 💻 Projeto
 
@@ -37,10 +40,36 @@ Acesse o Layout do projeto [aqui](#)
 ### Tópicos
 
 <ul>
-<li><a href="#conteúdo">Conteúdo</a></li>
-
+<li><a href="#tailwindcss">TailwindCSS</a></li>
+<li><a href="#radix">RadixUI</a></li>
+<li><a href="#shadcn">ShadcnUI</a></li>
 </ul>
 
-### Conteúdo
+### TailwindCSS
 
-<div id="#conteúdo"></div>
+<div id="#tailwindcss"></div>
+
+O Tailwind é um processador de estilização CSS baseado em classes
+
+### RadixUI
+
+<div id="#radix"></div>
+
+Biblioteca com vários componentes React sem estilização
+
+### ShadcnUI
+
+<div id="#shadcn"></div>
+
+Seguir a [documentação](https://ui.shadcn.com/docs/installation/vite) sobre a instalação da biblioteca para o Vite
+
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+npm install -D @types/node
+npx shadcn-ui@latest init
+```
+
+Bilioteca com vários componentes, principalmente do Radix, seguindo um estilo de design padrão com uma união dos componentes. Instala automaticamente o RadixUI e o TailwindCSS.
+Os comandos acima são um exemplo do que devo fazer para iniciar um projeto com Shadcn, conforme na documentação de instalação.
+Os componentes do Shadcn são copiados para dentro do projeto, ou seja, não vem de um pacote, como o MaterialUI ou Bootstrap
