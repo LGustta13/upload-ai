@@ -4,11 +4,12 @@ import { uploadVideoRoute } from "./routes/upload-video"
 import { createTranscriptionRoute } from "./routes/create-transcription"
 import { generateAICompleteRoute } from "./routes/generate-ai-completion"
 import { fastifyCors } from "@fastify/cors"
+import 'dotenv/config'
 
 const app = fastify()
 
 app.register(fastifyCors, {
-  origin: '*', // O ideal é colocar somente o endereço de onde está hospedado o Frontend
+  origin: process.env.BASE_URL || "*", // O ideal é colocar somente o endereço de onde está hospedado o Frontend
 })
 
 app.register(getAllPromptsRoute)
@@ -17,7 +18,7 @@ app.register(createTranscriptionRoute)
 app.register(generateAICompleteRoute)
 
 app.listen({
-  port: 3333,
+  port: Number(process.env.PORT) || 3333,
 }).then(() => {
   console.log("HTTP Server Running")
 })
