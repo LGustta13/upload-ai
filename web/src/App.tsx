@@ -15,7 +15,7 @@ export function App() {
 
         <div className="flex items-center gap-3">
 
-          <span className="text-sm text-muted-foreground">
+          <span className="text-sm text-muted-foreground tablet:hidden">
             Desenvolvido com 💜 no NLW da Rocketseat
           </span>
           <Separator orientation="vertical" className="h-6" />
@@ -29,24 +29,24 @@ export function App() {
         </div>
       </header>
 
-      <section className="flex-1 p-6 flex gap-6">
+      <section className="mobile:flex-col-reverse flex-1 p-6 flex gap-6">
         <div className="flex flex-col flex-1 gap-4">
           <div className="grid grid-rows-2 gap-4 flex-1">
             <Textarea
-              className="resize-none p-4 leading-relaxed"
+              className="resize-none p-4 leading-relaxed mobile:h-40"
               placeholder="Resultado gerado pela IA..."
             />
             <Textarea
-              className="resize-none p-4 leading-relaxed"
+              className="resize-none p-4 leading-relaxed mobile:h-40"
               placeholder="Resultado gerado pela IA..."
               readOnly
             />
           </div>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground mobile:text-xs">
             Lembre-se: você pode utilizar a variável <code className="text-primary">{'{transcription}'}</code> no seu prompt para adicionar uma transcrição
           </p>
         </div>
-        <aside className="w-80 space-y-6">
+        <aside className="mobile:w-full w-80 space-y-6 tablet:w-40">
           <form action="#" className="space-y-6">
             <label
               htmlFor="video"
@@ -79,7 +79,7 @@ export function App() {
             <div className="space-y-2">
               <Label>Prompt</Label>
               <Select>
-                <SelectTrigger>
+                <SelectTrigger className="tablet:py-6">
                   <SelectValue placeholder="Selecione um prompt..." />
                 </SelectTrigger>
                 <SelectContent>

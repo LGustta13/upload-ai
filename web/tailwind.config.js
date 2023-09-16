@@ -8,6 +8,10 @@ module.exports = {
     './src/**/*.{ts,tsx}',
 	],
   theme: {
+    screens: {
+      "tablet":{"max":"768px"},
+      "mobile":{"max":"425px"},
+    },
     container: {
       center: true,
       padding: "2rem",
