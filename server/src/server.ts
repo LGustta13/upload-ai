@@ -9,7 +9,7 @@ import 'dotenv/config'
 const app = fastify()
 
 app.register(fastifyCors, {
-  origin: process.env.BASE_URL || "*", // O ideal é colocar somente o endereço de onde está hospedado o Frontend
+  origin: process.env.ORIGIN_URL || "*", // O ideal é colocar somente o endereço de onde está hospedado o Frontend
 })
 
 app.register(getAllPromptsRoute)
