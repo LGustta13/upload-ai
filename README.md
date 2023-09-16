@@ -107,8 +107,95 @@ Utilizado para inserir ícones
 
 <ul>
 <li><a href="#conteudo">Conteudo</a></li>
+<li><a href="#fastify">Fastify</a></li>
+<li><a href="#prisma">Prisma</a></li>
 </ul>
 
 ### Conteúdo
 
 <div id="#conteudo"></div>
+
+```
+npm init -y
+npm install typescript @types/node tsx -D
+```
+
+O NodeJs em si não entende código em TypeScript, logo é necessário as instalações para que o tsx converta automaticamente o código para JavaScript on demand.
+
+### Fastify
+
+<div id="#fastify"></div>
+
+```
+npm install fastify
+```
+
+### Prisma
+
+<div id="#prisma"></div>
+
+```
+npm install prisma -D
+npx prisma init --datasource-provider sqlite
+```
+
+ORM para automatização na criação de tabelas e migrations. Tem sua própria sintaxe de DDL.
+Após a criação dos models em schema.prisma, rodar o comando abaixo para gerar uma nova migration
+
+```
+npx prisma migrate dev
+```
+
+Abrir o studio do prisma
+
+```
+npx prisma studio
+```
+
+Todas as rotas do Prisma devem ser assíncronas, se não o servidor nunca é executado.
+Se for necessário utilizar alguma rota para fazer o upload de arquivos (imagem, vídeo), deve-se utilizar uma biblioteca aparte (express -> multer, fastify -> fastify multipart)
+
+```
+npm install @fastify/multipart
+```
+
+Em aplicações Node, devemos especificar se queremos enviar arquivos JSON ou Multipart, por meio do register ou use()
+
+### Upload de arquivos
+
+Não e uma boa prática salvar dados de arquivos (imagens, vídeos) no diretório local do projeto. ALguns serviços para isso são: Amazon S3, CloudFlare R2 (mesma API do AS3).
+Porém no projeto será salvo no disco para facilitar o desenvolvimento.
+O NodeJS permite trabalhar com dados de Stream, ou seja, escrever e salvar aos poucos algum arquivo. Os dados vão chegando no Backend e já vão para o disco, sem necessidade de usar a memória para persistir até o download completo. Com isso, utiliza-se o pipeline juntamente ao promisify (rota post)
+
+### Zod
+
+```
+npm install zod
+```
+
+Bilioteca para validação de dados, muito eficiente com o TypeScript
+
+### OpenAi
+
+```
+npm install openai
+```
+
+Deve-se dar acesso à aplicação por meio de uma chave de API. Será utilizado o Whisper para transcrição do arquivo MP3.
+O único problema é que a versão free tem limitações de uso.
+
+#### Tokens
+
+No site [Tokenizer](https://platform.openai.com/tokenizer), é possível saber quantos tokens são consumidos pela ai (um shorts de 40 segundos consumiu 3oo tokens, de completion mais de prompt):
+
+- gpt 3.5 turbo: máximo de 4095 tokens
+- gpt 5.5 turbo 16k: máximo de 16000 tokens
+
+### Variáveis de ambiente
+
+```
+npm install dotenv -D
+```
+
+A versão do Node do projeto não suporta leitura de variaveis de ambiente nativamente. Logo é nenessário a biblioteca.
+No arquivo que será utilizado o process.env, importar a lib 'dotnev/config'
