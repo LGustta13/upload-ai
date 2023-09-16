@@ -5,6 +5,7 @@ import { Textarea } from "./components/ui/textarea";
 import { Label } from "./components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./components/ui/select";
 import { Slider } from "./components/ui/slider";
+import { ModeToggle } from "./components/mode-toggle";
 
 export function App() {
   return (
@@ -13,6 +14,7 @@ export function App() {
         <h1 className="text-xl font-bold">upload.ai</h1>
 
         <div className="flex items-center gap-3">
+
           <span className="text-sm text-muted-foreground">
             Desenvolvido com 💜 no NLW da Rocketseat
           </span>
@@ -22,6 +24,8 @@ export function App() {
             <Github className="w-4 h-4 mr-2" />
             Github
           </Button>
+
+          <ModeToggle />
         </div>
       </header>
 
