@@ -7,7 +7,8 @@ Aplicação que recebe vídeos e utiliza IA para gerar títulos e descrições .
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-anotações">Anotações</a>
+  <a href="#-web">Web</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-server">Server</a>
 </p>
 
 <br>
@@ -38,7 +39,7 @@ O Upload AI tem a responsabilidade de gerar qualquer informação em relação a
 
 Acesse o Layout do projeto [aqui](#)
 
-## 📋 Anotações
+## 📋 Web
 
 ### Tópicos
 
@@ -99,3 +100,15 @@ npm install lucide-react
 ```
 
 Utilizado para inserir ícones
+
+## 📋 Server
+
+### Tópicos
+
+<ul>
+<li><a href="#conteudo">Conteudo</a></li>
+</ul>
+
+### Conteúdo
+
+<div id="#conteudo"></div>
