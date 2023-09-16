@@ -24,6 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - TailwindCSS
 - RadixUI
 - ShadcnUI
+- Lucid react
 
 ## 💻 Projeto
 
@@ -49,7 +50,8 @@ Acesse o Layout do projeto [aqui](#)
 
 <div id="#tailwindcss"></div>
 
-O Tailwind é um processador de estilização CSS baseado em classes
+O Tailwind é um processador de estilização CSS baseado em classes.
+Todo tamanho colocado é um múltiplo de 4 (w-4 = width: 16px)
 
 ### RadixUI
 
@@ -77,3 +79,24 @@ Os componentes do Shadcn são copiados para dentro do projeto, ou seja, não vem
 #### components/ui
 
 Quando o shadcn é iniciado, o alias de @/components é usado para anexar todos os componentes que são baixados do shadcnUI, que vão na pasta ./ui
+
+```
+npx shadcn-ui@latest add button
+npx shadcn-ui@latest add separator
+npx shadcn-ui@latest add textarea
+npx shadcn-ui@latest add label
+npx shadcn-ui@latest add select
+npx shadcn-ui@latest add slider
+```
+
+### lucide react
+
+```
+npm install lucide-react
+```
+
+Utilizado para inserir ícones
+
+### Windows+.
+
+Chama uma lista de emojis
