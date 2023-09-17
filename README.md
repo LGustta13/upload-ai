@@ -199,3 +199,42 @@ npm install dotenv -D
 
 A versão do Node do projeto não suporta leitura de variaveis de ambiente nativamente. Logo é nenessário a biblioteca.
 No arquivo que será utilizado o process.env, importar a lib 'dotnev/config'
+
+### React
+
+Sempre que um estado muda de valor, a aplicação sente o efeito e é renderizada
+
+- useMemo: recebe uma função e um array de dependências como parâmetro. Permite com que a variavel que recebe o useMemo renderize somente se algum estado do vetor de dependências ter seu valor alterado.
+- useRef: é possível utilizar o useRef para trabalhar como se estivesse manipulando a DOM
+
+### Recurso do computador
+
+Eu estava tendo problemas com a conversão do vídeo para áudio, ou mesmo o uso das pipelines da IA dentro do backend, onde o Node estava consumindo mais de 3GB de RA, o que ultrapassava o limite de 512 MB do plano gratuito do Render. Logo, uma solução poode ser implementar o uso da IA dentro do Frontend, pois usará de recursos do computadopr do usuário
+
+### ffmpeg
+
+```
+npm install @ffmpeg/ffmpeg @ffmpeg/util
+```
+
+Principal biblioteca de edição audiovisual, será utilizada em paralelo com o webAssembly para que seja possível realizar a conversão no browser
+
+### WebAssembly
+
+Permite com que códigos que rodariam em backend possam ser executados no frontend
+
+### Vercel AI
+
+```
+npm install ai
+```
+
+Permite com que a resposta de um modelo de inteligência artificial seja enviada aos poucos par a interface do usuário
+
+### seed.ts
+
+```
+npx prisma db seed
+```
+
+Este arquivo é utilizado para popular o banco de addos do Prisma com os dois prompts de exemplo que serão executa pela IA. Deve ser inserido na pasta prisma e criar um script de comando no package.json
