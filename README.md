@@ -28,6 +28,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - ShadcnUI
 - Fastify
 - Prisma
+- OpenAi
+- Whisper
+- WebAssembly
 
 ## 💻 Projeto
 
