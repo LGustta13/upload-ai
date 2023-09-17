@@ -17,7 +17,7 @@ export function App() {
   const [videoId, setVideoId] = useState<string | null>(null)
 
   const { input, setInput, handleInputChange, handleSubmit, completion, isLoading } = useCompletion({
-    api: 'http://localhost:3333/ai/complete',
+    api: (import.meta.env.VITE_API_URL || 'http://localhost:3333') + '/ai/complete',
     body: {
       videoId,
       temperature
