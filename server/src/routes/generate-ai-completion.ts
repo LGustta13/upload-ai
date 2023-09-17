@@ -35,8 +35,6 @@ export async function generateAICompleteRoute(app: FastifyInstance) {
       stream: true,
     })
 
-    // console.log(response)
-
     const stream = OpenAIStream(response)
     streamToResponse(stream, res.raw, {
       headers: {
