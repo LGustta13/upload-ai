@@ -26,3 +26,4 @@ dist-ssr
 # files
 *.mp3
 *.mp4
+.env
